@@ -1,0 +1,18 @@
+analysis 
+    - 파이썬 이용. jupyter 환경에서 분석.
+    - 관련 파일은 file 폴더에 있다.
+
+file 
+    - 분석 관련 파일
+
+webPage
+    - 웹뷰어플을 만들기 위한 웹
+    - 중요내용은 대여 서비스를 연결해주는 웹 그리고, 홍보 목적
+    - 디자인은 free템플릿에서 가져왔다. (이상없음.)
+    - https://firebicycle.netlify.app/ (도메인주소)
+
+bicycle_competiton-.... 
+    - android 어플리케이션 파일
+
+# 
+다른 파일들은 google drive에 있다.

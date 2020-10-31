@@ -1,6 +1,7 @@
 # [BIGCONTEST](https://www.bigcontest.or.kr/)
 
 * 20200814 ~ 20200928
+* 1차 서류 탈락.
 
 ### file source
 

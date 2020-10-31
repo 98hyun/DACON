@@ -1,5 +1,7 @@
 ### programmers
 
+20200923~20201004 끝. 
+
 * [x] data load 
     - import 
 * [x] data browse

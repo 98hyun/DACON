@@ -1,0 +1,224 @@
+---
+title: "BA-DA Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+    social: [ "twitter", "facebook", "menu"]
+    source_code: embed
+---
+
+
+```{r setup, include=FALSE}
+# shortcut for inserting an r chunk -- Ctrl+Alt+i
+# include=FALSE: this whole code chunk is excluded in the output 
+library(flexdashboard)
+library(knitr)
+library(DT)
+library(ggplot2)
+library(dplyr)
+```
+
+
+```{r}
+# data <- read.csv(file.choose()) 
+# import datasets
+# In this quick example, we don't import any dataset. Instead, we are using 'mpg' dataset from ggplot2 package
+```
+
+Key Descriptive Statistics
+==============================
+---
+Note: ==== to indicate that this is a title for a dashboard page
+---
+
+Row
+-------------------------------------
+
+---
+Note: ----- to indicate that it's going to be a row
+---
+
+### Scatter Plot of displ & hwy in mpg
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = factor(class))) +
+  geom_point() +
+  scale_color_brewer(palette = "Set3")
+```
+
+### Scatter Plot With a Smooth Line
+
+```{r}
+# color aesthetic specified for only the geom_point layer
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = class)) +
+  geom_smooth(se = FALSE) 
+```
+
+### Scatter Plot With Labels & Annotations
+
+```{r}
+## adding labels & annotations
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = class)) +
+  geom_smooth(se = FALSE) +
+  labs(title = "Fuel Efficiency by Engine Power",
+       subtitle = "Fuel economy data from 1999 and 2008 for 38 popular models of cars",
+       x = "Engine power (litres displacement)",
+       y = "Fuel Efficiency (miles per gallon)",
+       color = "Car Type")
+
+```
+
+
+### Scatter Plot with Facets by year and cyl
+
+```{r}
+# faceting data by more than one categorical variable. 
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  facet_grid(year ~ cyl)
+```
+
+Row
+------------------------------------
+### Bar Chart of class in mpg
+
+```{r}
+ggplot(data = mpg, aes(x = class)) +
+  geom_bar(fill="dodgerblue", colour="grey40", alpha = .5)
+```
+
+### Bar Chart of class colored by drive (position = 'stack')
+
+```{r}
+# bar chart of class, colored by drive (front, rear, 4-wheel)
+ggplot(mpg, aes(x = class, fill = drv)) + 
+  geom_bar()
+```
+
+### Bar Chart of class colored by drive (position = 'dodge')
+
+```{r}
+# Alternatively, position = "dodge": values next to each other
+ggplot(mpg, aes(x = class, fill = drv)) + 
+  geom_bar(position = "dodge")
+```
+
+### Bar Chart of class colored by drive (x and y axis flipped)
+
+```{r}
+# flip x an y axis with coord flip
+ggplot(mpg, aes(x = class, fill = drv)) + 
+  geom_bar(position = "dodge") +
+  coord_flip() # [inserted into the dashboard]
+```
+
+Row
+------------------------------------
+### Histogram of hwy in mpg
+
+```{r}
+# adding mean line 
+ggplot(data = mpg, aes(x = hwy)) +
+  geom_histogram(binwidth = 1.5, color = "grey30", fill = "white") +
+  geom_vline(xintercept = mean(mpg$hwy), color = "red", linetype = "dashed", size = 1)
+```
+
+### Histogram of hwy in mpg colored by drv 
+```{r}
+## comparing groups using fill
+# overlaying histograms
+ggplot(data = mpg, aes(x = hwy, fill = drv)) +
+  geom_histogram(binwidth = 1.5, alpha = .5) 
+```
+
+### Histogram of hwy in mpg faceted by drv and cyl
+
+```{r}
+## comparing groups using faceting by drv and cyl
+ggplot(data = mpg, aes(x = hwy)) +
+  geom_histogram(binwidth = 1.5, color = "grey30", fill = "white") +
+  facet_grid(factor(drv) ~ factor(cyl))
+```
+
+
+### Overlap Histogram & Density Plot
+
+```{r}
+ggplot(data = mpg, aes(x = hwy)) +
+  geom_histogram(aes(y = ..density..), binwidth = 1.5, color = "grey30", fill = "white") + 
+  geom_density(alpha = .2, fill = "red")
+```
+
+Data Table
+========================================
+
+```{r}
+datatable(mpg,
+          caption = "Fuel economy data from 1999 to 2008 for 38 popular
+                           models of cars",
+          rownames = T,
+          filter = "top",
+          options = list(pageLength = 25))
+```
+
+
+Summary {data-orientation=columns} 
+===========================================
+
+Column 
+-----------------------------------
+### Max Highway Miles per Gallon (hwy)
+
+```{r}
+valueBox(max(mpg$hwy),
+         icon = "fa-user" )
+```
+
+### Max City Miles per Gallon (cty)
+
+```{r}
+valueBox(max(mpg$cty),
+         icon = "fa-user" )
+```
+
+### Average Highway Miles Per Gallon
+```{r}
+valueBox(round(mean(mpg$hwy),
+               digits = 2),
+         icon = "fa-area-chart")
+```
+
+### Average City Miles Per Gallon
+
+```{r}
+valueBox(round(mean(mpg$cty), digits = 2),
+         icon = "fa-area-chart")
+```
+
+Column
+---------------------------
+
+Report
+
+* This is a report on Fuel economy of popular models of `r length(mpg$model)` cars.
+
+* The average city mpg is `r mean(mpg$cty)`.
+
+* The average highway mpg is `r mean(mpg$hwy)`.
+
+This report was generated on `r format(Sys.Date(), format = "%B %d, %Y")`.
+
+About Report
+========================================
+
+Created by: BA-Data Analytics Class 2020
+
+Confidential: HIGHLY!
+
+
+
+
+

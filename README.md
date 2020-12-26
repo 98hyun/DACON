@@ -8,7 +8,9 @@
 * 심리예측 - [심리 성향 예측 AI 경진대회](https://dacon.io/competitions/official/235647/overview/)    
     * 47% 
 * [공간정보 탐색적 데이터 분석 경진대회](https://dacon.io/competitions/official/235682/overview/)
-    * [R 시각화 코드공유](https://dacon.io/competitions/official/235682/codeshare/2016?page=1&dtype=recent&ptype=pub)
+    * [R 시각화 코드공유](https://dacon.io/competitions/official/235682/codeshare/2016?page=1&dtype=recent&ptype=pub)  
+* [Y&Z세대 투자자 프로파일링](https://dacon.io/competitions/official/235663/overview/)
+    * [투자자 성향 시각화](https://dacon.io/codeshare/2040?dtype=recent)
 
 ### programmers
 

@@ -46,3 +46,7 @@
 
 * 경륜바이크 대여 시스템 제안. - [국민체육진흥공단](http://sportsdata.or.kr/event_view)
     * 1차 탈락.
+
+### COMPAS
+
+* [(용인시) 지역별 상권분석을 통한 청년창업 지원 대책 도출](https://compas.lh.or.kr/)

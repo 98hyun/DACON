@@ -11,7 +11,8 @@
     * [R 시각화 코드공유](https://dacon.io/competitions/official/235682/codeshare/2016?page=1&dtype=recent&ptype=pub)  
 * [Y&Z세대 투자자 프로파일링](https://dacon.io/competitions/official/235663/overview/)
     * [투자자 성향 시각화](https://dacon.io/codeshare/2040?dtype=recent)
-
+* [2020 DACON CUP](https://dacon.io/competitions/official/235683/overview/)
+    * 3.572 (7%)
 ### programmers
 
 * 미래에셋 - [금융 빅데이터 페스티벌] 주식 거래내역으로 매수 상위 종목 예측  
@@ -50,3 +51,4 @@
 ### COMPAS
 
 * [(용인시) 지역별 상권분석을 통한 청년창업 지원 대책 도출](https://compas.lh.or.kr/)
+    * 전체적인 산업 현황 시각화 및 창업 정착을 위한 아이디어 제시

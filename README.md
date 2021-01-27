@@ -12,7 +12,7 @@
 * [Y&Z세대 투자자 프로파일링](https://dacon.io/competitions/official/235663/overview/)
     * [투자자 성향 시각화](https://dacon.io/codeshare/2040?dtype=recent)
 * [2020 DACON CUP](https://dacon.io/competitions/official/235683/overview/)
-    * 3.572 (7%)
+    * private (4.89395) 5등.
 ### programmers
 
 * 미래에셋 - [금융 빅데이터 페스티벌] 주식 거래내역으로 매수 상위 종목 예측  

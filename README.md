@@ -1,4 +1,4 @@
-# Machine Learning project 
+# Machine Learning & data eda project 
 
 ### DACON  
 
@@ -13,6 +13,7 @@
     * [투자자 성향 시각화](https://dacon.io/codeshare/2040?dtype=recent)
 * [2020 DACON CUP](https://dacon.io/competitions/official/235683/overview/)
     * private (4.89395) 5등.
+
 ### programmers
 
 * 미래에셋 - [금융 빅데이터 페스티벌] 주식 거래내역으로 매수 상위 종목 예측  
@@ -31,6 +32,8 @@
     * 71%
 * [성인 인구조사 소득 예측 대회](https://www.kaggle.com/c/kakr-4th-competition)
     * 76%
+* [kaggle Marketing Analytics](https://www.kaggle.com/jackdaoud/marketing-data)
+    * task about marketing XYZ company submit with kaggle dataset
 
 ### sejong
 
@@ -51,4 +54,8 @@
 ### COMPAS
 
 * [(용인시) 지역별 상권분석을 통한 청년창업 지원 대책 도출](https://compas.lh.or.kr/)
-    * 전체적인 산업 현황 시각화 및 창업 정착을 위한 아이디어 제시
+    * 전체적인 산업 현황 시각화 및 창업 정착을 위한 아이디어 제시  
+    * 1차 탈락.  
+
+* [(세종시) 주택시장특성분석](https://compas.lh.or.kr/)
+    * 세종시 주택 시장 특성을 쉽고 명확히 보이도록 시각화 모델 제시
